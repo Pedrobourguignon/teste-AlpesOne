@@ -2,17 +2,23 @@ import Image from "next/image";
 import { ICar } from "@/types/ICar";
 import "../styles/components/carComponent.sass";
 
-export const CarComponent: React.FC<ICar> = ({ name, picture }) => {
+export const CarComponent: React.FC<ICar> = ({
+  name,
+  picture,
+  setIsModalOpen,
+}) => {
   return (
     <div className="car-content">
       <div className="car-info">
         <div className="car-img">
           <Image src={picture} alt={name} width={276} height={147} />
         </div>
-        <p>{name}</p>
+        <p className="car-name">{name}</p>
       </div>
       <div className="button-container">
-        <button className="quote-btn">Cotação</button>
+        <button className="quote-btn" onClick={() => setIsModalOpen(true)}>
+          Cotação
+        </button>
         <button className="call-btn">Ligar</button>
       </div>
       <div className="social-media-container">
