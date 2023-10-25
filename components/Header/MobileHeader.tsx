@@ -2,9 +2,9 @@ import Image from "next/image";
 import BMWLOGO from "/public/images/logo-bmw-rio.svg";
 import phoneIcon from "/public/icons/telefone.svg";
 import { contactNumber } from "@/utils/contactNumber";
-import "../styles/components/header.sass";
+import "../../styles/components/mobileHeader.sass";
 
-export const Header = () => {
+export const MobileHeader = () => {
   return (
     <div className="header">
       <div className="header-content">
