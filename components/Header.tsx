@@ -10,7 +10,7 @@ export const Header = () => {
       <div className="header-content">
         <div className="header-contact">
           <Image src={phoneIcon} alt="Phone Icon" width={19} height={19} />
-          <a>{contactNumber}</a>
+          <p>{contactNumber}</p>
         </div>
         <Image
           src={BMWLOGO}

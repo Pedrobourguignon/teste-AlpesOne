@@ -1,7 +1,9 @@
 import { Header } from "@/components/Header";
-import "../styles/main.sass";
 import { RequestQuote } from "@/components/RequestQuote";
 import { MobileBanner } from "@/components/MobileBanner";
+import "../styles/main.sass";
+import { CarComponent } from "@/components/CarComponent";
+import { carsList } from "@/utils/carsList";
 
 export default function Home() {
   return (
@@ -9,6 +11,14 @@ export default function Home() {
       <Header />
       <RequestQuote />
       <MobileBanner />
+      <div className="choose-your-bmw">
+        <p>ESCOLHA SEU BMW</p>
+        <div className="car-container">
+          {carsList.map((car, index) => (
+            <CarComponent name={car.name} picture={car.picture} key={+index} />
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

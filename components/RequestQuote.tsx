@@ -4,7 +4,7 @@ export const RequestQuote = () => {
   return (
     <div className="request-quote">
       <div className="request-quote-content">
-        <a>Solicite uma cotação</a>
+        <p>Solicite uma cotação</p>
       </div>
     </div>
   );
