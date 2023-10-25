@@ -4,6 +4,7 @@ import { MobileBanner } from "@/components/MobileBanner";
 import "../styles/main.sass";
 import { CarComponent } from "@/components/CarComponent";
 import { carsList } from "@/utils/carsList";
+import { Footer } from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
           ))}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
