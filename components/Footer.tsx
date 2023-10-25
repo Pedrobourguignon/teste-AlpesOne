@@ -12,17 +12,26 @@ export const Footer = () => {
           efficitur elit nunc, ut pulvinar massa egestas in. Fusce quis quam
           viverra, pretium quam ac, consectetur lectus.
         </p>
-      </div>
-      <div className="divider" />
-      <p>© Copyright © 2021 Lorem ipsum dolor sit amet.</p>
-      <div className="made-by">
-        <p>Feito por:</p>
-        <Image
-          src="/images/logo-alpes.png"
-          alt="logo alpes"
-          width={124}
-          height={24}
-        />
+        <div className="divider" />
+        <div className="copyright">
+          <Image
+            className="logo-bmw"
+            src="/images/logo-bmw-rio.svg"
+            alt="logo alpes"
+            width={50}
+            height={50}
+          />
+          <p>© Copyright © 2021 Lorem ipsum dolor sit amet.</p>
+          <div className="made-by">
+            <p>Feito por:</p>
+            <Image
+              src="/images/logo-alpes.png"
+              alt="logo alpes"
+              width={124}
+              height={24}
+            />
+          </div>
+        </div>
       </div>
     </div>
   );

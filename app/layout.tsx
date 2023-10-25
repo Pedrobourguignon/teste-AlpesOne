@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "@next/font/local";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const fonts = localFont({
   src: [
@@ -28,7 +29,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={fonts.className}>{children}</body>
+      <body className={fonts.className}>
+        <ChakraProvider>{children}</ChakraProvider>
+      </body>
     </html>
   );
 }

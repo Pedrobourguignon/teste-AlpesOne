@@ -3,70 +3,62 @@
     display: flex
     flex-direction: column
     gap: 20px
-    max-width: 328px
-.car-img
-    display: flex
-    justify-content: center
+    max-width: 315px
+    p
+        text-align: left
+    .car-info
+        display: flex
+        flex-direction: column
+        gap: 10px
+        justify-content: flex-start
+        .car-img
+            display: flex
+            justify-content: center
+        .car-img:hover
+            opacity: 0.5
+        .car-name
+            text-align: start
+    .button-container
+        display: flex
+        width: 100%
+        gap:16px
+        font-size: 12px
+        .quote-btn
+            background-color: variables.$button-primary-color
+            border: none
+            height: 35px
+            width: 156px
+            color: white
+            font-weight: 700
+            cursor: pointer
+        .quote-btn:hover
+            background-color: variables.$button-primary-hover-color
+            border: none
+            height: 35px
+            width: 156px
+            color: white
+            font-weight: 700
+        .call-btn
+            background-color: variables.$font-secondary-color
+            border: none
+            height: 35px
+            width: 156px
+            color: white
+            font-weight: 700
+            cursor: pointer
+        .call-btn:hover
+            background-color: variables.$font-secondary-color
+            border: none
+            opacity: 0.8
+            height: 35px
+            width: 156px
+            color: white
+            font-weight: 700
 
-.car-content p
-    text-align: left
-  
-
-.car-info
-    display: flex
-    flex-direction: column
-    gap: 10px
-    justify-content: flex-start
-
-.car-name
-    text-align: start
-
-.button-container
-    display: flex
-    width: 100%
-    gap:16px
-    font-size: 12px
-
-.quote-btn
-    background-color: variables.$button-primary-color
-    border: none
-    height: 35px
-    width: 156px
-    color: white
-    font-weight: 700
-    cursor: pointer
-
-.quote-btn:hover
-    background-color: variables.$button-primary-hover-color
-    border: none
-    height: 35px
-    width: 156px
-    color: white
-    font-weight: 700
-
-.call-btn
-    background-color: variables.$font-secondary-color
-    border: none
-    height: 35px
-    width: 156px
-    color: white
-    font-weight: 700
-    cursor: pointer
-
-.call-btn:hover
-    background-color: variables.$font-secondary-color
-    border: none
-    opacity: 0.8
-    height: 35px
-    width: 156px
-    color: white
-    font-weight: 700
-
-.social-media-container
-    display: flex
-    gap: 16px
-    align-items: center
-    
-.social-media-container p 
-    font-size: 12px
-    color: variables.$font-secondary-color
+    .social-media-container
+        display: flex
+        gap: 16px
+        align-items: center    
+        p 
+            font-size: 12px
+            color: variables.$font-secondary-color

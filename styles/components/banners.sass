@@ -1,0 +1,26 @@
+@use '../variables'
+
+.mobile-banner-container
+    display: flex
+    align-items: flex-end
+    justify-content: center
+    position: relative
+    @media screen and (max-width: 768px) 
+        padding-top: 105px
+    .carousel
+        margin-bottom: 20px
+        display: flex
+        gap: 10px
+        position: absolute
+        .carousel-navigator
+            height: 14px
+            background-color: variables.$footer-primary
+            width: 14px
+            border-radius: 100%
+            box-shadow: 0px 3px 6px #00000029
+        .carousel-navigator-selected
+            height: 14px
+            background-color: variables.$button-primary-color
+            width: 14px
+            border-radius: 100%
+            box-shadow: 0px 3px 6px #00000029

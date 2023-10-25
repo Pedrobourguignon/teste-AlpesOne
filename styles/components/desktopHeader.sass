@@ -1,0 +1,95 @@
+@use '../variables'
+
+.desktop-header-container
+    height: 152px
+    display: flex
+    justify-content: center
+    .desktop-content
+        padding: 30px 0
+        display: flex
+        justify-content: space-between
+        width: 100%
+        max-width: 1350px 
+        .header-menu
+            display: flex
+            flex-direction: column
+            gap: 30px
+            width: 100%
+            .contact-session
+                display: flex
+                gap: 30px
+                .phone
+                    background-color: #000000
+                    color: white
+                    height: 43px
+                    width: 165px
+                    font-size: 14px
+                    cursor: pointer
+                    .phone-content
+                        display: flex
+                        gap: 6px
+                        align-items: center
+                        justify-content: center
+                        p
+                            font-weight: 700
+                .phone:hover
+                    background-color: #575757
+                    color: white
+                    height: 43px
+                    width: 165px
+                    font-size: 14px
+                    cursor: pointer
+                .virtual-tour
+                    background-color: #000000
+                    color: white
+                    height: 43px
+                    width: 165px
+                    font-size: 14px
+                    cursor: pointer
+                    .virtual-tour-content
+                        display: flex
+                        gap: 6px
+                        align-items: center
+                        justify-content: center
+                        p
+                            font-weight: 700
+                .virtual-tour:hover
+                    background-color: #575757
+                    color: white
+                    height: 43px
+                    width: 165px
+                    font-size: 14px
+                    cursor: pointer
+                .whatsapp
+                    background-color: variables.$button-tertiary-color
+                    color: white
+                    height: 43px
+                    width: 165px
+                    font-size: 14px
+                    cursor: pointer
+                    .whatsapp-content
+                        display: flex
+                        gap: 6px
+                        align-items: center
+                        justify-content: center
+                        p
+                            font-size: 14px
+                            font-weight: 700
+                .whatsapp:hover
+                    background-color: variables.$button-tertiary-hover-color
+                    color: white
+                    height: 43px
+                    width: 165px
+                    font-size: 14px
+                    cursor: pointer
+            .models-container
+                display: flex
+                max-width: 824px
+                justify-content: space-between
+                cursor: pointer
+                p
+                    color: variables.$font-secondary-color
+                    font-weight: 700
+                    font-size: 14px
+                p:hover
+                    opacity: 0.8
