@@ -11,15 +11,24 @@
     color: variables.$font-primary-color
     gap: 30px
     
-.choose-your-bmw p 
+.session-title 
     text-align: center
     text-transform: uppercase
     font-weight: 26px
 
 .car-container
-    display: flex
-    flex-direction: column
+    display: grid
+    justify-items: center
+    grid-template-columns: repeat(auto-fill, minmax(315px, 1fr))
     gap:30px
     padding-bottom: 54px
+
+.header-fixed
+    position: fixed
+    z-index: 10
+    width: 100%
+
+.container
+    position: relative
     
 
