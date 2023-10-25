@@ -1,11 +1,19 @@
 import type { Metadata } from "next";
 import localFont from "@next/font/local";
 
-const BMWTypeNextBold = localFont({
-  src: "./fonts/BMWTypeNext-Bold.20210426144302.ttf",
-});
-const BMWTypeNextLight = localFont({
-  src: "./fonts/BMWTypeNext-Light.20210426144302.ttf",
+const fonts = localFont({
+  src: [
+    {
+      path: "./fonts/BMWTypeNext-Light.20210426144302.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "./fonts/BMWTypeNext-Bold.20210426144302.ttf",
+      weight: "700",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -20,7 +28,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={BMWTypeNextBold.className}>{children}</body>
+      <body className={fonts.className}>{children}</body>
     </html>
   );
 }
