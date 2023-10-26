@@ -6,12 +6,12 @@ import { Footer } from "@/components/Footer";
 import { WhatsappButton } from "@/components/WhatsappButton";
 import { useState } from "react";
 import { IFormData } from "@/types/IFormData";
-import { Modal } from "@/components/Modal";
 import { MobileHeader } from "@/components/Header/MobileHeader";
 import { DesktopHeader } from "@/components/Header/DesktopHeader";
 import { useMediaQuery } from "@chakra-ui/react";
 import { Banners } from "@/components/Banners";
 import "../styles/main.sass";
+import { ContactModal } from "@/components/ContactModal";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -41,8 +41,8 @@ export default function Home() {
         <div className="car-container">
           {carsList.map((car, index) => (
             <CarComponent
-              name={car.name}
-              picture={car.picture}
+              isFullComponent={true}
+              car={car}
               setIsModalOpen={setIsModalOpen}
               key={+index}
             />
@@ -51,10 +51,11 @@ export default function Home() {
       </div>
       <Footer />
       <WhatsappButton />
-      <Modal
+      <ContactModal
         isOpen={isModalOpen}
         closeModal={closeModal}
         handleSubmit={handleSubmit}
+        isFullModal={true}
       />
     </div>
   );
