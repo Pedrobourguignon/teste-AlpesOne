@@ -1,36 +1,61 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Teste AlpesOne com Sass, TypeScript, Chakra e Controle de SVG Icons
 
-## Getting Started
+Este é o repositório do Teste AlpesOne, desenvolvido com Next.js, Sass para estilização, TypeScript para tipagem, e a biblioteca Chakra UI para controle de renderização de componentes em diferentes responsividades e gerenciamento de SVG icons.
 
-First, run the development server:
+## Pré-requisitos
+
+Antes de começar, certifique-se de ter o [Yarn](https://classic.yarnpkg.com/en/docs/install/) instalado. Você pode instalá-lo com o seguinte comando:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install -g yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Instalação
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Clone este repositório:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+```bash
+git clone https://github.com/Pedrobourguignon/teste-AlpesOne.git
+```
 
-## Learn More
+- Acesse o diretório do projeto:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+cd teste-AlpesOne
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- Instale as dependências com Yarn:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+```bash
+yarn install
+```
 
-## Deploy on Vercel
+## Executando o Projeto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Para iniciar o servidor de desenvolvimento, use o seguinte comando:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```bash
+yarn dev
+```
+
+Isso iniciará o aplicativo em `http://localhost:3000`.
+
+## Scripts Disponíveis
+
+No diretório do projeto, você pode executar os seguintes comandos:
+
+- `yarn dev`: Inicia o servidor de desenvolvimento.
+- `yarn build`: Constrói o aplicativo para produção.
+- `yarn start`: Inicia o aplicativo em um ambiente de produção.
+- `yarn lint`: Executa a verificação de estilo com TypeScript e ESLint.
+
+## Estilização
+
+Este projeto utiliza o Sass para estilização. Os arquivos de estilos estão localizados em diretórios específicos e são importados nos componentes quando necessário.
+
+## Observações
+
+Utilizei ChakraUI para controle de renderização de componentes de acordo com o Breakpoint usando o UseMediaQuery, também foi usado para criação dos icons.
+
+
+
