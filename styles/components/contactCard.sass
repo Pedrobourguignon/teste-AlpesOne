@@ -1,50 +1,24 @@
 @use '../variables'
     
-.modal
-    position: fixed
-    top: 0
-    left: 0
+.card
     width: 100%
     height: 100%
+    position: absolute
+    justify-content: end
     display: flex
-    background-color: rgba(0, 0, 0, 0.3)
-    justify-content: center
-    align-items: center
-    z-index: 999
-    .modal-content
-        width: 100%
-        max-width: 600px
-        background-color: #fff
-        .close 
-            width: full
-            display: flex
-            background-color: variables.$font-secondary-color    
-            cursor: pointer
-            justify-content: center
-            height: 45px
-            align-items: center
-            color: #fff
-            font-size: 14px
-            font-weight: 700
-        .close:hover
-            width: full
-            display: flex
-            background-color: variables.$font-secondary-color    
-            cursor: pointer
-            justify-content: center
-            height: 45px
-            align-items: center
-            color: #fff
-            font-size: 14px
-            font-weight: 700
-            opacity: 0.8        
-        .modal-form
+    .card-content
+        height: max-content
+        margin-top: 30px
+        margin-right: 15%
+        background-color: #fff   
+        .card-form
             padding: 30px 16px 16px 16px
             position: relative
-            .modal-header
+            .card-header
                 display: flex
                 gap: 10px
                 justify-content: center
+                align-items: center
                 margin-bottom: 30px
                 p 
                     color: #000000
@@ -82,7 +56,7 @@
                     border: none
                     border-bottom: 1px solid #BBBBBB
                     color: variables.$font-secondary-color
-                    height: 31px
+                    height: 29px
                     padding: 0px
                     background: url('/icons/seta-para-baixo.svg') no-repeat right center
                     background-size: 16px

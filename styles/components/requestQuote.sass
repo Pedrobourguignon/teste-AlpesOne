@@ -2,13 +2,20 @@
 .request-quote
     background-color: variables.$button-primary-color
     cursor: pointer
+    height: 100%
     .request-quote-content
+        height: 100%
         padding: 13px 0
         color: white
         font-size: 14px
         line-height: 19px
         text-align: center
+        justify-content: center
         font-weight: 700
+        display: flex
+        align-items: center
+        @media screen and (min-width: 768px)
+            width: 255px       
 .request-quote:hover
     background-color: variables.$button-primary-hover-color
 

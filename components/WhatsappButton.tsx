@@ -1,10 +1,10 @@
-import Image from "next/image";
+import { WhatsappIcon } from "./Icons/WhatsappIcon";
 import "../styles/components/whatsapp.sass";
 
 export const WhatsappButton = () => {
   return (
     <div className="whatsapp-container">
-      <Image src="/icons/whatsapp.svg" alt="whatsApp" width={36} height={36} />
+      <WhatsappIcon color="white" width="36px" height="36px" />
     </div>
   );
 };

@@ -2,7 +2,7 @@
 import { RequestQuote } from "@/components/RequestQuote";
 import { CarComponent } from "@/components/CarComponent";
 import { carsList } from "@/utils/carsList";
-import { Footer } from "@/components/Footer";
+import { Footer } from "@/components/Footer/Footer";
 import { WhatsappButton } from "@/components/WhatsappButton";
 import { useState } from "react";
 import { IFormData } from "@/types/IFormData";
@@ -12,6 +12,8 @@ import { useMediaQuery } from "@chakra-ui/react";
 import { Banners } from "@/components/Banners";
 import "../styles/main.sass";
 import { ContactModal } from "@/components/ContactModal";
+import { FlyingFooter } from "@/components/Footer/FlyingFooter";
+import { FlyingDesktopHeader } from "@/components/Header/FlyingDesktopHeader";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -28,11 +30,17 @@ export default function Home() {
   return (
     <div className="container">
       {isLargerThan768 ? (
-        <DesktopHeader />
+        <>
+          <DesktopHeader />
+          <FlyingDesktopHeader setIsModalOpen={setIsModalOpen} />
+        </>
       ) : (
         <div className="header-fixed">
           <MobileHeader />
-          <RequestQuote setIsModalOpen={setIsModalOpen} />
+          <RequestQuote
+            setIsModalOpen={setIsModalOpen}
+            text="Solicite uma cotação"
+          />
         </div>
       )}
       <Banners />
@@ -42,6 +50,7 @@ export default function Home() {
           {carsList.map((car, index) => (
             <CarComponent
               isFullComponent={true}
+              isDesktop={isLargerThan768 ? true : false}
               car={car}
               setIsModalOpen={setIsModalOpen}
               key={+index}
@@ -50,6 +59,7 @@ export default function Home() {
         </div>
       </div>
       <Footer />
+      {isLargerThan768 && <FlyingFooter />}
       <WhatsappButton />
       <ContactModal
         isOpen={isModalOpen}

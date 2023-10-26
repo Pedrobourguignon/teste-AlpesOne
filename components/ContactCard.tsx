@@ -1,24 +1,15 @@
-"use client";
 import { IFormData } from "@/types/IFormData";
 import { useState } from "react";
-import "../styles/components/modal.sass";
 import { CarIcon } from "./Icons/CarIcon";
-import { carsList } from "@/utils/carsList";
 import { Spinner, useToast } from "@chakra-ui/react";
+import "../styles/components/contactCard.sass";
+import { carsList } from "@/utils/carsList";
 
-interface ModalProps {
-  isOpen: boolean;
-  closeModal?: () => void;
+interface IContactCard {
   handleSubmit: (formData: IFormData) => void;
-  isFullModal: boolean;
 }
 
-export const ContactModal: React.FC<ModalProps> = ({
-  isOpen,
-  closeModal,
-  handleSubmit,
-  isFullModal,
-}) => {
+export const ContactCard: React.FC<IContactCard> = ({ handleSubmit }) => {
   const [formData, setFormData] = useState<IFormData>({
     nome: "",
     email: "",
@@ -58,18 +49,12 @@ export const ContactModal: React.FC<ModalProps> = ({
       });
     }, 2000);
   };
-
-  return isOpen ? (
-    <div className="modal">
-      <div className="modal-content">
-        {isFullModal && (
-          <span className="close" onClick={closeModal}>
-            Minimizar
-          </span>
-        )}
-        <div className="modal-form">
-          <div className="modal-header">
-            <CarIcon color="#1C69D4" width="28px" height="28px" />
+  return (
+    <div className="card">
+      <div className="card-content">
+        <div className="card-form">
+          <div className="card-header">
+            <CarIcon color="#1C69D4" width="23px" height="23px" />
             <p>Solicitar cotação</p>
           </div>
           <form onSubmit={onSubmit}>
@@ -142,5 +127,5 @@ export const ContactModal: React.FC<ModalProps> = ({
         </div>
       </div>
     </div>
-  ) : null;
+  );
 };

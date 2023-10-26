@@ -11,6 +11,7 @@
         flex-direction: column
         gap: 10px
         justify-content: flex-start
+        cursor: pointer
         .car-img
             display: flex
             justify-content: center
@@ -31,6 +32,8 @@
             color: white
             font-weight: 700
             cursor: pointer
+            @media screen and (min-width: 768px) 
+                width: 100%
         .quote-btn:hover
             background-color: variables.$button-primary-hover-color
             border: none
@@ -38,6 +41,8 @@
             width: 156px
             color: white
             font-weight: 700
+            @media screen and (min-width: 768px) 
+                width: 100%
         .call-btn
             background-color: variables.$font-secondary-color
             border: none
@@ -45,7 +50,7 @@
             width: 156px
             color: white
             font-weight: 700
-            cursor: pointer
+            cursor: pointer              
         .call-btn:hover
             background-color: variables.$font-secondary-color
             border: none
@@ -58,7 +63,11 @@
     .social-media-container
         display: flex
         gap: 16px
-        align-items: center    
+        align-items: center
         p 
             font-size: 12px
             color: variables.$font-secondary-color
+        svg
+            cursor: pointer   
+        svg:hover
+            color: variables.$button-primary-color

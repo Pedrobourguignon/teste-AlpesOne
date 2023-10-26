@@ -1,5 +1,5 @@
 import Image from "next/image";
-import "../styles/components/footer.sass";
+import "../../styles/components/footer.sass";
 
 export const Footer = () => {
   return (

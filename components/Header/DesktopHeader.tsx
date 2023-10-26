@@ -3,6 +3,9 @@ import { contactNumber } from "@/utils/contactNumber";
 import "../../styles/components/desktopHeader.sass";
 import { useState } from "react";
 import Dropdown from "../DropDown";
+import { GlobalIcon } from "../Icons/GlobalIcon";
+import { PhoneIcon } from "../Icons/PhoneIcon";
+import { WhatsappIcon } from "../Icons/WhatsappIcon";
 export const DesktopHeader = () => {
   const modelsList = [
     "1",
@@ -30,29 +33,19 @@ export const DesktopHeader = () => {
           <div className="contact-session">
             <button className="phone">
               <div className="phone-content">
-                <Image
-                  src="/icons/telefone.svg"
-                  alt="telefone"
-                  width={19}
-                  height={19}
-                />
+                <PhoneIcon width="19px" height="19px" color="white" />
                 <p>{contactNumber}</p>
               </div>
             </button>
             <button className="virtual-tour">
               <div className="virtual-tour-content">
-                <Image src="/icons/360.svg" alt="360" width={19} height={19} />
+                <GlobalIcon color="white" width="19px" height="19px" />
                 <p>TOUR VIRTUAL</p>
               </div>
             </button>
             <button className="whatsapp">
               <div className="whatsapp-content">
-                <Image
-                  src="/icons/whatsapp.svg"
-                  alt="whatsapp"
-                  width={19}
-                  height={19}
-                />
+                <WhatsappIcon color="white" width="19px" height="19px" />
                 <p>WHATSAPP</p>
               </div>
             </button>
