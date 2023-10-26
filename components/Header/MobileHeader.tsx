@@ -1,8 +1,8 @@
 import Image from "next/image";
 import BMWLOGO from "/public/images/logo-bmw-rio.svg";
 import { contactNumber } from "@/utils/contactNumber";
-import "../../styles/components/mobileHeader.sass";
 import { PhoneIcon } from "../Icons/PhoneIcon";
+import "../../styles/components/mobileHeader.sass";
 
 export const MobileHeader = () => {
   return (

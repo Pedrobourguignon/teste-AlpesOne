@@ -1,19 +1,19 @@
 "use client";
+import { useState } from "react";
 import { RequestQuote } from "@/components/RequestQuote";
 import { CarComponent } from "@/components/CarComponent";
 import { carsList } from "@/utils/carsList";
 import { Footer } from "@/components/Footer/Footer";
 import { WhatsappButton } from "@/components/WhatsappButton";
-import { useState } from "react";
 import { IFormData } from "@/types/IFormData";
 import { MobileHeader } from "@/components/Header/MobileHeader";
 import { DesktopHeader } from "@/components/Header/DesktopHeader";
 import { useMediaQuery } from "@chakra-ui/react";
 import { Banners } from "@/components/Banners";
-import "../styles/main.sass";
 import { ContactModal } from "@/components/ContactModal";
 import { FlyingFooter } from "@/components/Footer/FlyingFooter";
 import { FlyingDesktopHeader } from "@/components/Header/FlyingDesktopHeader";
+import "../styles/main.sass";
 
 export default function Home() {
   const [isModalOpen, setIsModalOpen] = useState(false);

@@ -3,8 +3,8 @@ import mobileBanner from "../public/images/mobile-banner.png";
 import desktopBanner from "../public/images/desktop-banner.jpg";
 import { useMediaQuery } from "@chakra-ui/react";
 import { IFormData } from "@/types/IFormData";
-import "../styles/components/banners.sass";
 import { ContactCard } from "./ContactCard";
+import "../styles/components/banners.sass";
 
 export const Banners = () => {
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)");

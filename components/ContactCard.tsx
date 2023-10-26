@@ -1,9 +1,9 @@
-import { IFormData } from "@/types/IFormData";
 import { useState } from "react";
+import { IFormData } from "@/types/IFormData";
 import { CarIcon } from "./Icons/CarIcon";
 import { Spinner, useToast } from "@chakra-ui/react";
-import "../styles/components/contactCard.sass";
 import { carsList } from "@/utils/carsList";
+import "../styles/components/contactCard.sass";
 
 interface IContactCard {
   handleSubmit: (formData: IFormData) => void;

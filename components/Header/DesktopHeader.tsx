@@ -1,11 +1,12 @@
+import { useState } from "react";
 import Image from "next/image";
 import { contactNumber } from "@/utils/contactNumber";
-import "../../styles/components/desktopHeader.sass";
-import { useState } from "react";
 import Dropdown from "../DropDown";
 import { GlobalIcon } from "../Icons/GlobalIcon";
 import { PhoneIcon } from "../Icons/PhoneIcon";
 import { WhatsappIcon } from "../Icons/WhatsappIcon";
+import "../../styles/components/desktopHeader.sass";
+
 export const DesktopHeader = () => {
   const modelsList = [
     "1",

@@ -1,10 +1,10 @@
 "use client";
-import { IFormData } from "@/types/IFormData";
 import { useState } from "react";
-import "../styles/components/modal.sass";
+import { IFormData } from "@/types/IFormData";
 import { CarIcon } from "./Icons/CarIcon";
 import { carsList } from "@/utils/carsList";
 import { Spinner, useToast } from "@chakra-ui/react";
+import "../styles/components/modal.sass";
 
 interface ModalProps {
   isOpen: boolean;

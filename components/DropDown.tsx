@@ -1,8 +1,8 @@
 import { useEffect, useRef, Dispatch, SetStateAction, useState } from "react";
+import Image from "next/image";
 import { carsList } from "@/utils/carsList";
 import { CarComponent } from "./CarComponent";
 import "../styles/components/dropdown.sass";
-import Image from "next/image";
 
 interface IDropdown {
   isOpen: boolean;

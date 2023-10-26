@@ -1,9 +1,9 @@
+import { Dispatch, SetStateAction } from "react";
 import Image from "next/image";
 import { ICar } from "@/types/ICar";
-import "../styles/components/carComponent.sass";
-import { Dispatch, SetStateAction } from "react";
 import { FacebookIcon } from "./Icons/FacebookIcon";
 import { WhatsappIcon } from "./Icons/WhatsappIcon";
+import "../styles/components/carComponent.sass";
 
 interface ICarComponent {
   car: ICar;

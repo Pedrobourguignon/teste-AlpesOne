@@ -1,7 +1,7 @@
-import Image from "next/image";
-import "../../styles/components/flyingDesktopHeader.sass";
-import { RequestQuote } from "../RequestQuote";
 import { Dispatch, SetStateAction, useEffect, useState } from "react";
+import Image from "next/image";
+import { RequestQuote } from "../RequestQuote";
+import "../../styles/components/flyingDesktopHeader.sass";
 
 interface IFlyingHeader {
   setIsModalOpen: Dispatch<SetStateAction<boolean>>;
