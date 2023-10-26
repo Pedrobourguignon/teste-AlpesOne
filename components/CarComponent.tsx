@@ -1,26 +1,35 @@
 import Image from "next/image";
 import { ICar } from "@/types/ICar";
 import "../styles/components/carComponent.sass";
+import { Dispatch, SetStateAction } from "react";
 
-export const CarComponent: React.FC<ICar> = ({
-  name,
-  picture,
+interface ICarComponent {
+  car: ICar;
+  setIsModalOpen: Dispatch<SetStateAction<boolean>>;
+  isFullComponent: boolean;
+}
+
+export const CarComponent: React.FC<ICarComponent> = ({
+  car,
   setIsModalOpen,
+  isFullComponent,
 }) => {
   return (
     <div className="car-content">
       <div className="car-info">
         <div className="car-img">
-          <Image src={picture} alt={name} width={276} height={147} />
+          <Image src={car.picture} alt={car.name} width={276} height={147} />
         </div>
-        <p className="car-name">{name}</p>
+        <p className="car-name">{car.name}</p>
       </div>
-      <div className="button-container">
-        <button className="quote-btn" onClick={() => setIsModalOpen(true)}>
-          Cotação
-        </button>
-        <button className="call-btn">Ligar</button>
-      </div>
+      {isFullComponent && (
+        <div className="button-container">
+          <button className="quote-btn" onClick={() => setIsModalOpen(true)}>
+            Cotação
+          </button>
+          <button className="call-btn">Ligar</button>
+        </div>
+      )}
       <div className="social-media-container">
         <p>Compartilhe:</p>
         <Image

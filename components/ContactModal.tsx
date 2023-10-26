@@ -8,12 +8,14 @@ interface ModalProps {
   isOpen: boolean;
   closeModal: () => void;
   handleSubmit: (formData: IFormData) => void;
+  isFullModal: boolean;
 }
 
-export const Modal: React.FC<ModalProps> = ({
+export const ContactModal: React.FC<ModalProps> = ({
   isOpen,
   closeModal,
   handleSubmit,
+  isFullModal,
 }) => {
   const [formData, setFormData] = useState<IFormData>({
     nome: "",
@@ -47,9 +49,11 @@ export const Modal: React.FC<ModalProps> = ({
   return isOpen ? (
     <div className="modal">
       <div className="modal-content">
-        <span className="close" onClick={closeModal}>
-          Minimizar
-        </span>
+        {isFullModal && (
+          <span className="close" onClick={closeModal}>
+            Minimizar
+          </span>
+        )}
         <div className="modal-form">
           <div className="modal-header">
             <Image src="/icons/carro.svg" alt="carro" width={28} height={28} />

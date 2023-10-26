@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { contactNumber } from "@/utils/contactNumber";
 import "../../styles/components/desktopHeader.sass";
+import { useState } from "react";
+import Dropdown from "../DropDown";
 export const DesktopHeader = () => {
   const modelsList = [
     "1",
@@ -17,8 +19,12 @@ export const DesktopHeader = () => {
     "i",
     "Plug-in-Hybrid",
   ];
+
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
   return (
     <div className="desktop-header-container">
+      <Dropdown isOpen={isDropdownOpen} setIsOpen={setIsDropdownOpen} />
       <div className="desktop-content">
         <div className="header-menu">
           <div className="contact-session">
@@ -53,7 +59,12 @@ export const DesktopHeader = () => {
           </div>
           <div className="models-container">
             {modelsList.map((model, index) => (
-              <p key={+index}>{model}</p>
+              <p
+                key={+index}
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              >
+                {model}{" "}
+              </p>
             ))}
           </div>
         </div>
