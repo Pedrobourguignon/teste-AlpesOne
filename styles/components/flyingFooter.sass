@@ -1,0 +1,33 @@
+@use '../variables'
+.flying-footer
+    position: fixed
+    bottom: 0
+    left:0
+    display: flex
+    height: 50px
+    background-color: white
+    width: 100%
+    box-shadow: 0px -3px 6px #00000029
+    align-items: center
+    justify-content: flex-end
+    .flying-footer-content
+        display: flex
+        gap: 30px
+        padding-right: 30px
+        font-size: 14px
+        font-weight: 700
+        color: variables.$font-secondary-color
+        .phone
+            display: flex
+            gap: 6px
+        .tour
+            display: flex
+            gap: 6px
+            cursor: pointer
+            svg
+                color: variables.$font-secondary-color
+                width: 19px
+                height: 19px
+        .tour:hover,svg:hover
+            color: variables.$button-primary-color
+            

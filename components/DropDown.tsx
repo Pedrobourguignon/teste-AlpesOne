@@ -39,6 +39,7 @@ const Dropdown: React.FC<IDropdown> = ({ isOpen, setIsOpen }) => {
       <div className="dropdown-content">
         {carsList.slice(4).map((car, index) => (
           <CarComponent
+            isDesktop={false}
             key={+index}
             isFullComponent={false}
             car={car}
